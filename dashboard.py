@@ -4,9 +4,10 @@ from utils.image_classifier import label_info
 def render():
     """Merender halaman Dashboard."""
 
-    st.title("📊 Dashboard Informasi Tingkat Kematangan Labu Butternut")
+    st.title("🪴 Smart Garden Assistant: Partner Berkebun Cerdas Anda")
     st.markdown("---")
-    st.markdown("Selamat datang! Pelajari perbedaan antara labu yang belum matang, setengah matang, dan matang untuk memaksimalkan hasil panen Anda.")
+    st.markdown("## Informasi Tingkat Kematangan Labu Butternut")
+    st.markdown("Selamat datang! Smart Garden Assistant hadir untuk membantu Anda memaksimalkan panen. Pelajari cara membedakan labu butternut yang belum matang, setengah matang, dan matang sempurna.")
 
     # PERUBAHAN: Path gambar sekarang menunjuk ke file lokal di folder 'assets'
     image_paths = {

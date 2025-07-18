@@ -7,7 +7,7 @@ import daily_tips
 import os
 
 # Konfigurasi halaman
-st.set_page_config(page_title="Smart Garden Web Assistant", layout="wide")
+st.set_page_config(page_title="Smart Garden Assistant", layout="wide")
 
 # Cek session state untuk routing halaman
 if 'page' not in st.session_state:
@@ -39,9 +39,9 @@ else:
     # Mengambil username dari session state untuk ditampilkan sebagai judul
     if 'username' in st.session_state:
         username = st.session_state['username'].capitalize()
-        st.sidebar.markdown(f"## 👋 Selamat Datang, **{username}**")
+        st.sidebar.markdown(f"## 👋 Halo, **{username}**")
     else:
-        st.sidebar.title("Smart Garden Web Assistant") # Fallback
+        st.sidebar.title("Smart Garden Assistant") # Fallback
 
     # Menu navigasi
     menu = st.sidebar.radio(
@@ -64,7 +64,7 @@ else:
             result = classify_image(uploaded)
             st.image(uploaded, width=450)
             if result['status'] == 'ok':
-                st.success(f"✅ Status: {result['label']} (Confidence: {result['confidence'] * 100:.0f}%)")
+                st.success(f"✅ Status: {result['label']}")
                 st.info(f"ℹ️ Keterangan: {result['description']}")
                 st.warning(f"🛠️ Solusi: {result['solution']}")
             else:

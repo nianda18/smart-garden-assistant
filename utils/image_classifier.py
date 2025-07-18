@@ -91,8 +91,7 @@ def classify_image(image_file, threshold=0.98):
             return {
                 "status": "invalid",
                 "message": (
-                    f"❌ Confidence terlalu rendah ({confidence:.2f}). "
-                    "Gambar kemungkinan bukan labu butternut."
+                    f"❌ Gambar kemungkinan bukan labu butternut."
                 )
             }
             
